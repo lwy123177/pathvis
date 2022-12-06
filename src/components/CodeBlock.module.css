@@ -1,0 +1,35 @@
+.code-block {
+  display: block;
+  background: none;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  max-width: 100%;
+  min-width: 100px;
+  padding: 0;
+  font-family: monospace;
+}
+.keyword {
+  color: blueviolet;
+}
+.high-light .keyword {
+  color: pink;
+}
+.line-no {
+  color: gray;
+}
+.code-block .high-light {
+  color: white;
+  background-color: teal;
+  animation: high-light 0.5s linear;
+}
+@keyframes high-light {
+  0% {
+    color: black;
+    background-color: white;
+  }
+  100% {
+    background-color: teal;
+    color: white;
+  }
+}

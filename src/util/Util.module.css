@@ -1,0 +1,35 @@
+.page {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.hidden {
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
+}
+.blink {
+  animation: blink 0.5s linear 2;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .page {
+    margin-left: 0px;
+    margin-right: 20px;
+  }
+}
+@media only screen and (max-width: 797px) {
+  .page {
+    margin-left: 10px;
+  }
+}

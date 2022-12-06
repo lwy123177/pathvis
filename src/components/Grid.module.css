@@ -1,0 +1,133 @@
+.div-table {
+  display: table;
+  width: 510px;
+  background-color: #eee;
+  border: 1px solid #666666;
+}
+.div-table-row {
+  display: table-row;
+  width: auto;
+}
+.div-table-col {
+  float: left; /* fix for  buggy browsers */
+  display: table-column;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #666666;
+  transition: all 0.2s ease-in-out;
+}
+.div-table .div-table-col.start:hover,
+.div-table .div-table-col.destination:hover {
+  transform: scale(2);
+}
+.div-table .div-table-col.empty:hover {
+  transform: scale(1.2);
+}
+.empty {
+  background-color: #fff;
+}
+.visited {
+  background-color: lightgray;
+}
+.obstacle {
+  background-color: darkmagenta;
+}
+.current {
+  background-color: red;
+}
+.start {
+  background-color: lightsalmon;
+}
+.destination {
+  background-color: greenyellow;
+}
+.exploring {
+  background-color: aqua;
+}
+.path {
+  background-color: black;
+}
+.label-row {
+  display: flex;
+}
+.label-col {
+  margin-right: 5px;
+}
+.hint {
+  font-size: 12px;
+  color: #666666;
+}
+.time {
+  margin-left: 20px;
+}
+.time label {
+  color: grey;
+}
+.bump {
+  animation: bump 1000ms ease-in-out;
+}
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 3px;
+  margin-bottom: 3px;
+}
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.bump-path {
+  animation: bump 2000ms ease-in-out;
+}
+.flex-container {
+  display: row;
+}
+@media only screen and (min-width: 1300px) {
+  .flex-container {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 797px) {
+  .div-table {
+    width: auto;
+  }
+  .div-table-col {
+    width: 20px;
+    height: 20px;
+  }
+  .label-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
