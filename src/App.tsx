@@ -10,10 +10,10 @@ const App = () => {
     <>
       <ResponsiveAppBar />
       <Routes>
-        <Route path="/" element={<LandPage />} />
-        <Route path="/bfs" element={<Bfs />} />
-        <Route path="/dfs" element={<Dfs />} />
-        <Route path="/astar" element={<AStar />} />
+        <Route path="/pathvis" element={<LandPage />} />
+        <Route path="/pathvis/bfs" element={<Bfs />} />
+        <Route path="/pathvis/dfs" element={<Dfs />} />
+        <Route path="/pathvis/astar" element={<AStar />} />
       </Routes>
     </>
   );

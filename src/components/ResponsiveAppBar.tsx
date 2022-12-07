@@ -19,6 +19,7 @@ import { GridContext } from "../store/GridContext";
 
 const pages = ["AStar", "Bfs", "Dfs"];
 const settings = ["About", "Source Code"];
+const links = ["pathvis/astar", "pathvis/bfs", "pathvis/dfs"];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<
@@ -46,10 +47,10 @@ const ResponsiveAppBar = () => {
     setAnchorElUser(null);
   };
 
-  const handleClickNavLink = (page: string) => {
+  const handleClickNavLink = (link: string) => {
     if (gridContext.state !== "Drawing") {
       gridContext.setHighlightLines([]);
-      navigate(page);
+      navigate(link);
     }
     handleCloseNavMenu();
   };
@@ -78,7 +79,7 @@ const ResponsiveAppBar = () => {
             noWrap
             component="a"
             href="#"
-            onClick={() => handleClickNavLink("/")}
+            onClick={() => handleClickNavLink("/pathvis")}
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -121,7 +122,7 @@ const ResponsiveAppBar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
+              {pages.map((page, index) => (
                 <Tooltip
                   key={"tool_" + page}
                   title={
@@ -134,7 +135,7 @@ const ResponsiveAppBar = () => {
                     <Typography
                       textAlign="center"
                       onClick={() => {
-                        handleClickNavLink(page);
+                        handleClickNavLink(links[index]);
                       }}
                     >
                       {page}
@@ -165,7 +166,7 @@ const ResponsiveAppBar = () => {
             PathVisual
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
+            {pages.map((page, index) => (
               <Tooltip
                 key={"tool_" + page}
                 title={
@@ -176,7 +177,7 @@ const ResponsiveAppBar = () => {
               >
                 <Button
                   key={"bnt_" + page}
-                  onClick={() => handleClickNavLink(page)}
+                  onClick={() => handleClickNavLink(links[index])}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
                   {page}
