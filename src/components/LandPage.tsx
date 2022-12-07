@@ -47,7 +47,7 @@ const LandPage = () => {
     if (page) page.focus();
   };
   const handleViewSourceCode = () => {
-    pageRedirect("https://github.com/lwy123177/lwy123177.github.io");
+    pageRedirect("https://github.com/lwy123177/pathvis");
   };
   const handleContactAuthor = () => {
     pageRedirect("https://leetcode.com/lwy123177/");
