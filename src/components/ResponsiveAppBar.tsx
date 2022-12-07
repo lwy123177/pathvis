@@ -59,7 +59,7 @@ const ResponsiveAppBar = () => {
     if (setting === "About") {
       setOpenAboutDialog(true);
     } else if (setting === "Source Code") {
-      const url = "https://github.com/lwy123177/lwy123177.github.io";
+      const url = "https://github.com/lwy123177/pathvis";
       const result = window.open(url, "_blank");
       if (result) {
         result.focus();
@@ -151,7 +151,7 @@ const ResponsiveAppBar = () => {
             noWrap
             component="a"
             href="#"
-            onClick={() => handleClickNavLink("/")}
+            onClick={() => handleClickNavLink("/pathvis")}
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
